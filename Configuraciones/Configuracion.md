@@ -56,35 +56,39 @@ hacia el ERP de IDEMPIERE.
   
 ## _**Configuraciones**_
 
+Configurador del Sistema :
+En esta se podrá cambiar los valores que están configurados actualmente un ejemplo sería : a qué usuario se le va a enviar el correo , cuál es la localización o el usuario por defecto; esto sería en el caso si en un futuro varie el ID de BDO lo podemos cambiar .
+
+También si se habilita o deshabilita el desarrollo para que no funcione .
+
+![idempiere](id1.jpeg)
+
 Para realizar dicha configuración, se realiza los siguientes pasos:
 
 1. Digite la palabra __*configuración*__ en el menú de búsqueda principal.
 
 2. En el campo __*Nombre*__ coloque la palabra *BDO*.
 
-![GifProceso3](GifProceso6.gif)
-
 3. Configuración del sistema si desea parar el programa ponga N y si desea continuar ponga Y.
 
+![GifProceso3](GifProceso6.gif)
 ![GifProceso3](GifProceso7.gif)
 
 4. Ventana de terceros.
 
-![GifProceso3](GifProceso8.gif)
-
 5. Ubicación de direcciones.
-
-![GifProceso3](GifProceso9.gif)
 
 6. ID usuario por defecto en caso de no asociar contacto con el RUC.
 
+![GifProceso3](GifProceso8.gif)
+![GifProceso3](GifProceso9.gif)
 ![GifProceso3](GifProceso10.gif)
 
 7. Texto de notificaciones de la nueva orden.
 
 ![GifProceso3](GifProceso11.gif)
 
-8. 
+
 
 
 
