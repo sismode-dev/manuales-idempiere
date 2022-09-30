@@ -72,7 +72,6 @@ Para realizar dicha configuración, se realiza los siguientes pasos:
 3. Configuración del sistema si desea parar el programa ponga N y si desea continuar ponga Y.
 
 ![GifProceso3](GifProceso6.gif)
-![GifProceso3](GifProceso7.gif)
 
 4. Ventana de terceros.
 
@@ -81,8 +80,6 @@ Para realizar dicha configuración, se realiza los siguientes pasos:
 6. ID usuario por defecto en caso de no asociar contacto con el RUC.
 
 ![GifProceso3](GifProceso8.gif)
-![GifProceso3](GifProceso9.gif)
-![GifProceso3](GifProceso10.gif)
 
 7. Texto de notificaciones de la nueva orden.
 
