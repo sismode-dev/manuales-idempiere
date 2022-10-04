@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Manuales</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Configuracion.html"><strong aria-hidden="true">1.</strong> Configuraciones</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Manuales</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="autoasignación-de-usuario-localización-y-precios-para-una-orden-de-venta"><a class="header" href="#autoasignación-de-usuario-localización-y-precios-para-una-orden-de-venta">Autoasignación de usuario, localización y precios para una orden de venta</a></h1>
+<p>Las ordenes de venta provienen de un sistema externo al ERP de Sismode, en este caso son enviadas a través de una empresa llamada BDO ADVIRSOR
+hacia el ERP de IDEMPIERE; a las ordenes de venta se le asigna la direcciÓn del usuario envase al RUC del encabezado de la orden,
+esto lo hacen buscandolo en la localización del contacto del cliente BDO.</p>
+<p><img src="./img/id.jpg" alt="idempiere" /></p>
+<h2 id="entidades-participantes"><a class="header" href="#entidades-participantes"><em><strong>Entidades Participantes</strong></em></a></h2>
+<ul>
+<li>
+<p><strong>El tercero</strong> es con quién se realiza transacciones, en este caso el tercero BDO. </p>
+</li>
+<li>
+<p><strong>La orden</strong> es la que proviene del sistema externo de BDO.</p>
+</li>
+<li>
+<p><strong>Localización</strong> es un campo clave dentro de la orden que debe ser actualizado envase al RUC.</p>
+</li>
+<li>
+<p><strong>ISDN</strong> es el campo que está dentro de la localización .</p>
+</li>
+<li>
+<p><strong>Contácto (<em>usuario</em>)</strong> es un campo clave dentro de la orden de venta, que se actualiza y se toman desde el tercero BDO considerando al RUC.</p>
+</li>
+<li>
+<p><strong>Línea de orden</strong> es donde se ubican los productos y estas lineas van hacer actualizadas envase al precio.</p>
+</li>
+<li>
+<p><strong>Producto</strong> puede ser comprado o vendido.</p>
+</li>
+</ul>
+<h1 id="configuraciones-necesarias-para-este-desarrollo"><a class="header" href="#configuraciones-necesarias-para-este-desarrollo">Configuraciones necesarias para este desarrollo</a></h1>
+<h2 id="primera-configuración"><a class="header" href="#primera-configuración"><em><strong>Primera Configuración</strong></em></a></h2>
+<p>En la lista de precios se pueden manejar varias listas en donde se determina la moneda del documento así como el tratamiento de impuestos.</p>
+<p>Hay varias formas de crear un listado de precios, a continuación se le explica la primera:</p>
+<p>Siga los siguientes pasos:</p>
+<ol>
+<li>
+<p>Digite la palabra <strong><em>lista de precio</em></strong> en el menú de búsqueda principal.</p>
+</li>
+<li>
+<p>Ubique la lista de precioso BDO, en caso de no existir cree la lista de precios de BDO.</p>
+</li>
+<li>
+<p>Descienda a la versión de lista de precio. </p>
+</li>
+<li>
+<p>En el <strong><em>Esquema lista de precios</em></strong> seleccione <em>BDO</em>. </p>
+</li>
+<li>
+<p>Asegurese de colocar una fecha que no este repetida, a fin de que el sistema le deje guardar los cambios deseados.</p>
+</li>
+<li>
+<p>Baje a la pestaña de productos. </p>
+</li>
+<li>
+<p>Digite el precio de productos.</p>
+</li>
+<li>
+<p>Digite el precio de lista.</p>
+</li>
+<li>
+<p>Digite el precio estándar</p>
+</li>
+<li>
+<p>Digite el precio lÍmite.</p>
+</li>
+<li>
+<p>Configuración del RUC dentro de la localización en el campo ISR.</p>
+</li>
+<li>
+<p>Coloque el campo del RUC dentro del Usuario.</p>
+</li>
+</ol>
+<h2 id="configuraciones-del-sistema"><a class="header" href="#configuraciones-del-sistema"><em><strong>Configuraciones del Sistema</strong></em></a></h2>
+<p>Dentro de está configuración se puede cambiar valores que esten actualmente configurados un claro ejemplo sería a qué usuario se le va a enviar el correo, cuál es la localización
+o el usuario por defecto esto sería en el caso de que un futuro varie el ID de BDO lo podrían cambiar.</p>
+<p>También se podrá observar si se habilita o deshabilita el desarrollo actual. </p>
+<p>Para realizar dicha configuración, se realiza los siguientes pasos:</p>
+<ol>
+<li>
+<p>Configuración BDO_AUTOMATIC_ASSIGNMENT_ENABLED
+Habilita la autoasignación de usuarios, direcciones y precios para las ordenes de venta de BDO.</p>
+</li>
+<li>
+<p>Configuración BDO_BP_ID 
+id_BDO en la ventana de terceros en caso de que varie el ID del BDO se puede actualizar.</p>
+</li>
+<li>
+<p>Configuración BDO_DEFAULT_LOCATION_ID
+El id de ubicación por defecto para direcciones del tercero relacionado de BDO (en caso de no encontrar la correcta).</p>
+</li>
+<li>
+<p>Configuración BDO_DEFAULT_USER_ID
+El id de usuario por defecto de caso de no poder asociar un contacto a través del RUC del relacionado.</p>
+</li>
+<li>
+<p>Configuración BDO_MAIL_TEXT_TO_ALERT
+El texto de notificación de nueva orden de venta de BDO.</p>
+</li>
+<li>
+<p>Configuración BDO_USER_ID_TO_ALERT
+El id del usuario a quien se le envía los correos electrónicos de asignación de usuario y localización de ordenes BDO.</p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>

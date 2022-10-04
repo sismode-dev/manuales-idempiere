@@ -1,0 +1,7 @@
+[book]
+authors = ["JonathanA-Erazo"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Manuales"
+build-dir = "docs"
