@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introducción</li><li class="chapter-item expanded "><a href="Introducción.html"><strong aria-hidden="true">1.</strong> Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Manuales</li><li class="chapter-item expanded "><a href="Primera_Configuraci%C3%B3n.html"><strong aria-hidden="true">2.</strong> Primera Configuración</a></li><li class="chapter-item expanded "><a href="Configuradores_del_Sistema.html"><strong aria-hidden="true">3.</strong> Configuradores del Sistema</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introducción</li><li class="chapter-item expanded "><a href="Introducción.html"><strong aria-hidden="true">1.</strong> Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Manuales</li><li class="chapter-item expanded "><a href="Primera_Configuración.html"><strong aria-hidden="true">2.</strong> Primera Configuración</a></li><li class="chapter-item expanded "><a href="Configuradores_del_Sistema.html"><strong aria-hidden="true">3.</strong> Configuradores del Sistema</a></li><li class="chapter-item expanded "><a href="Configuración_del_Ruc_del_Usuario.html"><strong aria-hidden="true">4.</strong> Configuración del Ruc Usuario</a></li><li class="chapter-item expanded "><a href="Configuracion_del_Ruc_(Tercero).html"><strong aria-hidden="true">5.</strong> Configuración del RUC Tercero</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -172,7 +172,48 @@ esto lo hacen buscandolo en la localización del contacto del cliente BDO.</p>
 <p><strong>Producto</strong> puede ser comprado o vendido.</p>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="primera-configuración"><a class="header" href="#primera-configuración">Primera Configuración</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="configuraciones-necesarias-para-este-desarrollo"><a class="header" href="#configuraciones-necesarias-para-este-desarrollo">Configuraciones necesarias para este desarrollo</a></h1>
+<h2 id="primera-configuración"><a class="header" href="#primera-configuración"><em><strong>Primera Configuración</strong></em></a></h2>
+<p>En la lista de precios se pueden manejar varias listas en donde se determina la moneda del documento así como el tratamiento de impuestos.</p>
+<p>Hay varias formas de crear un listado de precios, a continuación se le explica la primera:</p>
+<p>Siga los siguientes pasos:</p>
+<ol>
+<li>Digite la palabra <strong><em>lista de precio</em></strong> en el menú de búsqueda principal.</li>
+<li>Ubique la lista de precios BDO, en caso de no existir cree la lista de precios de BDO.</li>
+</ol>
+<p><img src="./img/1.Listadeprecios.gif" alt="GIFGA1" /></p>
+<ol start="3">
+<li>Descienda a la versión de lista de precio.</li>
+<li>Cree un nuevo registro y en el campo nombre coloque el RUC de la emepresa a la que desea configurar el precio. </li>
+</ol>
+<p><img src="./img/2.versionlistadeprecios.gif" alt="GIFGA1" /></p>
+<ol start="5">
+<li>
+<p>En el <strong><em>Esquema lista de precios</em></strong> seleccione <em>BDO</em> (en caso de no encontrarlo creelo). </p>
+</li>
+<li>
+<p>Asegurese de colocar una fecha que no este repetida, a fin de que el sistema le deje guardar los cambios deseados (las fechas deben ser anteriores a la actual). </p>
+</li>
+<li>
+<p>Baje a la pestaña de productos. </p>
+</li>
+</ol>
+<p><img src="./img/3.esquemalistadeprecios.gif" alt="GIFGA1" /></p>
+<ol start="8">
+<li>
+<p>Digite el precio de productos.</p>
+</li>
+<li>
+<p>Digite el precio de lista.</p>
+</li>
+<li>
+<p>Digite el precio estándar</p>
+</li>
+<li>
+<p>Digite el precio lÍmite.</p>
+</li>
+</ol>
+<p><img src="./img/4.Pestanaproductos.gif" alt="GIFGA1" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="configuradores-del-sistema"><a class="header" href="#configuradores-del-sistema"><em>Configuradores del Sistema</em></a></h2>
 <p>Dentro de está ventana se puede cambiar valores que esten actualmente configurados un claro ejemplo sería a qué usuario se le va a enviar el correo, cuál es la localización
 o el usuario por defecto, esto sería en el caso de que un futuro varie el ID de BDO y de está manera lo podrían cambiar.</p>
@@ -205,6 +246,31 @@ El id del usuario a quien se le envía los correos electrónicos de asignación 
 </li>
 </ol>
 <p><img src="./img/user_id.jpeg" alt="idempiere" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="configuración-del-usuario"><a class="header" href="#configuración-del-usuario"><em>Configuración del Usuario</em></a></h2>
+<ol>
+<li>Ingrese al tercero BDO.</li>
+</ol>
+<p><img src="./img/paso1.jpeg" alt="idempiere" /></p>
+<ol start="2">
+<li>Descienda la pestaña usuario.</li>
+</ol>
+<p><img src="./img/paso2.jpeg" alt="idempiere" /></p>
+<p><img src="./img/dos.jpeg" alt="idempiere" /></p>
+<ol start="3">
+<li>Registre el nombre del contacto y en el campo número de identificación asegure de colocar el RUC del tercero de la empresa relacionada.</li>
+</ol>
+<p><img src="./img/paso3.jpeg" alt="idempiere" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="configuración-del-ruc-dentro-de-la-localización-en-el-campo-isdn"><a class="header" href="#configuración-del-ruc-dentro-de-la-localización-en-el-campo-isdn"><em><strong>Configuración del RUC dentro de la localización en el campo ISDN</strong></em></a></h2>
+<ol>
+<li>Ingrese al tercero BDO.</li>
+<li>Baje a la pestaña de localización.</li>
+</ol>
+<p><img src="./img/bdo.jpeg" alt="idempiere" /></p>
+<ol start="3">
+<li>Cree un registro y coloque los datos deseados del nombre de la localización.</li>
+<li>En el campo ISDN asegurese de colocar el RUC del tercero.</li>
+</ol>
+<p><img src="./img/localizacion.jpeg" alt="idempiere" /></p>
 
                     </main>
 
