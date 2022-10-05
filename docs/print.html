@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="Configuracion.html"><strong aria-hidden="true">1.</strong> Configuraciones</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introducción</li><li class="chapter-item expanded "><a href="Introducción.html"><strong aria-hidden="true">1.</strong> Introducción</a></li><li class="chapter-item expanded affix "><li class="part-title">Manuales</li><li class="chapter-item expanded "><a href="Primera_Configuraci%C3%B3n.html"><strong aria-hidden="true">2.</strong> Primera Configuración</a></li><li class="chapter-item expanded "><a href="Configuradores_del_Sistema.html"><strong aria-hidden="true">3.</strong> Configuradores del Sistema</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,13 +145,13 @@
                     <main>
                         <h1 id="autoasignación-de-usuario-localización-y-precios-para-una-orden-de-venta"><a class="header" href="#autoasignación-de-usuario-localización-y-precios-para-una-orden-de-venta">Autoasignación de usuario, localización y precios para una orden de venta</a></h1>
 <p>Las ordenes de venta provienen de un sistema externo al ERP de Sismode, en este caso son enviadas a través de una empresa llamada BDO ADVIRSOR
-hacia el ERP de IDEMPIERE; a las ordenes de venta se le asigna la direcciÓn del usuario envase al RUC del encabezado de la orden,
+hacia el ERP de IDEMPIERE; a las ordenes de venta se le asigna la dirección del usuario envase al RUC del encabezado de la orden,
 esto lo hacen buscandolo en la localización del contacto del cliente BDO.</p>
 <p><img src="./img/id.jpg" alt="idempiere" /></p>
 <h2 id="entidades-participantes"><a class="header" href="#entidades-participantes"><em><strong>Entidades Participantes</strong></em></a></h2>
 <ul>
 <li>
-<p><strong>El tercero</strong> es con quién se realiza transacciones, en este caso el tercero BDO. </p>
+<p><strong>tercero</strong> (cliente) es con quién se realiza transacciones, en este caso el tercero BDO. </p>
 </li>
 <li>
 <p><strong>La orden</strong> es la que proviene del sistema externo de BDO.</p>
@@ -160,7 +160,7 @@ esto lo hacen buscandolo en la localización del contacto del cliente BDO.</p>
 <p><strong>Localización</strong> es un campo clave dentro de la orden que debe ser actualizado envase al RUC.</p>
 </li>
 <li>
-<p><strong>ISDN</strong> es el campo que está dentro de la localización .</p>
+<p><strong>ISDN</strong> es el campo que está dentro de la localización, en este campo se debe colocar el RUC.</p>
 </li>
 <li>
 <p><strong>Contácto (<em>usuario</em>)</strong> es un campo clave dentro de la orden de venta, que se actualiza y se toman desde el tercero BDO considerando al RUC.</p>
@@ -172,80 +172,39 @@ esto lo hacen buscandolo en la localización del contacto del cliente BDO.</p>
 <p><strong>Producto</strong> puede ser comprado o vendido.</p>
 </li>
 </ul>
-<h1 id="configuraciones-necesarias-para-este-desarrollo"><a class="header" href="#configuraciones-necesarias-para-este-desarrollo">Configuraciones necesarias para este desarrollo</a></h1>
-<h2 id="primera-configuración"><a class="header" href="#primera-configuración"><em><strong>Primera Configuración</strong></em></a></h2>
-<p>En la lista de precios se pueden manejar varias listas en donde se determina la moneda del documento así como el tratamiento de impuestos.</p>
-<p>Hay varias formas de crear un listado de precios, a continuación se le explica la primera:</p>
-<p>Siga los siguientes pasos:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="primera-configuración"><a class="header" href="#primera-configuración">Primera Configuración</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="configuradores-del-sistema"><a class="header" href="#configuradores-del-sistema"><em>Configuradores del Sistema</em></a></h2>
+<p>Dentro de está ventana se puede cambiar valores que esten actualmente configurados un claro ejemplo sería a qué usuario se le va a enviar el correo, cuál es la localización
+o el usuario por defecto, esto sería en el caso de que un futuro varie el ID de BDO y de está manera lo podrían cambiar.</p>
+<h3 id="habilitar-o-deshabilitar-el-desarrollo-actual"><a class="header" href="#habilitar-o-deshabilitar-el-desarrollo-actual"><em>Habilitar o deshabilitar el desarrollo actual</em></a></h3>
+<p>Configuraciones actuales de este desarrollo:</p>
 <ol>
 <li>
-<p>Digite la palabra <strong><em>lista de precio</em></strong> en el menú de búsqueda principal.</p>
-</li>
-<li>
-<p>Ubique la lista de precioso BDO, en caso de no existir cree la lista de precios de BDO.</p>
-</li>
-<li>
-<p>Descienda a la versión de lista de precio. </p>
-</li>
-<li>
-<p>En el <strong><em>Esquema lista de precios</em></strong> seleccione <em>BDO</em>. </p>
-</li>
-<li>
-<p>Asegurese de colocar una fecha que no este repetida, a fin de que el sistema le deje guardar los cambios deseados.</p>
-</li>
-<li>
-<p>Baje a la pestaña de productos. </p>
-</li>
-<li>
-<p>Digite el precio de productos.</p>
-</li>
-<li>
-<p>Digite el precio de lista.</p>
-</li>
-<li>
-<p>Digite el precio estándar</p>
-</li>
-<li>
-<p>Digite el precio lÍmite.</p>
-</li>
-<li>
-<p>Configuración del RUC dentro de la localización en el campo ISR.</p>
-</li>
-<li>
-<p>Coloque el campo del RUC dentro del Usuario.</p>
-</li>
-</ol>
-<h2 id="configuraciones-del-sistema"><a class="header" href="#configuraciones-del-sistema"><em><strong>Configuraciones del Sistema</strong></em></a></h2>
-<p>Dentro de está configuración se puede cambiar valores que esten actualmente configurados un claro ejemplo sería a qué usuario se le va a enviar el correo, cuál es la localización
-o el usuario por defecto esto sería en el caso de que un futuro varie el ID de BDO lo podrían cambiar.</p>
-<p>También se podrá observar si se habilita o deshabilita el desarrollo actual. </p>
-<p>Para realizar dicha configuración, se realiza los siguientes pasos:</p>
-<ol>
-<li>
-<p>Configuración BDO_AUTOMATIC_ASSIGNMENT_ENABLED
+<p>BDO_AUTOMATIC_ASSIGNMENT_ENABLED:
 Habilita la autoasignación de usuarios, direcciones y precios para las ordenes de venta de BDO.</p>
 </li>
 <li>
-<p>Configuración BDO_BP_ID 
+<p>BDO_BP_ID: 
 id_BDO en la ventana de terceros en caso de que varie el ID del BDO se puede actualizar.</p>
 </li>
 <li>
-<p>Configuración BDO_DEFAULT_LOCATION_ID
+<p>BDO_DEFAULT_LOCATION_ID: 
 El id de ubicación por defecto para direcciones del tercero relacionado de BDO (en caso de no encontrar la correcta).</p>
 </li>
 <li>
-<p>Configuración BDO_DEFAULT_USER_ID
+<p>BDO_DEFAULT_USER_ID: 
 El id de usuario por defecto de caso de no poder asociar un contacto a través del RUC del relacionado.</p>
 </li>
 <li>
-<p>Configuración BDO_MAIL_TEXT_TO_ALERT
+<p>BDO_MAIL_TEXT_TO_ALERT: 
 El texto de notificación de nueva orden de venta de BDO.</p>
 </li>
 <li>
-<p>Configuración BDO_USER_ID_TO_ALERT
+<p>BDO_USER_ID_TO_ALERT: 
 El id del usuario a quien se le envía los correos electrónicos de asignación de usuario y localización de ordenes BDO.</p>
 </li>
 </ol>
+<p><img src="./img/user_id.jpeg" alt="idempiere" /></p>
 
                     </main>
 
